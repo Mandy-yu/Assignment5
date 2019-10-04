@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import fileinput
 import re
+import sys
 my_file=sys.argv[2]
 Lookup_geneID={}
 for line in fileinput.input(['/chengqiy/Homo_sapiens.GRCh37.75.gtf']):
