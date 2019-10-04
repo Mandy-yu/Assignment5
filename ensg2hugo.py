@@ -19,4 +19,4 @@ for line in fileinput.input(my_file):
     if match:
        if match.group() in Lookup_geneID:
           text_in_columns[4]=re.sub('\n','',text_in_columns[4].rstrip());
-          print text_in_columns[0] + ",\"" + Lookup_geneID[text_in_columns[1]] + "\"," + text_in_columns[2] + "," + text_in_columns[3] + "," + text_in_columns[4]
+          print text_in_columns[0] + ",\"" + Lookup_geneID[match.group()] + "\"," + text_in_columns[2] + "," + text_in_columns[3] + "," + text_in_columns[4]
