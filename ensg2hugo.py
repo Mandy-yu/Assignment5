@@ -4,7 +4,7 @@ import re
 import sys
 my_file=sys.argv[2]
 Lookup_geneID={}
-for line in fileinput.input(['/chengqiy/Homo_sapiens.GRCh37.75.gtf']):
+for line in fileinput.input(['Homo_sapiens.GRCh37.75.gtf']):
     gene_id_matches = re.findall('gene_id \"(.*?)\";',line)
     gene_name_matches = re.findall('gene_name \"(.*?)\";',line)
     text_in_columns = re.split('\t',line)
