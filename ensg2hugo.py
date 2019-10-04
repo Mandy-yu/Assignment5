@@ -17,6 +17,6 @@ for line in fileinput.input(my_file):
     text_in_columns = re.split(',',line)
     match = re.search('ENSG\d*',text_in_columns[1])
     if match:
-       if match.grou() in Lookup_geneID:
+       if match.group() in Lookup_geneID:
           text_in_columns[4]=re.sub('\n','',text_in_columns[4].rstrip());
           print text_in_columns[0] + ",\"" + Lookup_geneID[text_in_columns[1]] + "\"," + text_in_columns[2] + "," + text_in_columns[3] + "," + text_in_columns[4]
